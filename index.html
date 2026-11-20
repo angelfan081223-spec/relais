@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retour au Studio…</title>
+<style>body{font-family:system-ui,sans-serif;background:#111;color:#eee;display:grid;place-items:center;min-height:100vh;margin:0}a{color:#9cf}</style>
+</head>
+<body>
+<p>Retour au Studio… <a id="lien" href="#">Cliquer ici si rien ne se passe</a></p>
+<script>
+  // Relais : Meta exige une adresse https ; on renvoie aussitôt vers le Studio local avec les mêmes paramètres.
+  var cible = "http://127.0.0.1:3000/api/instagram/callback" + window.location.search;
+  document.getElementById("lien").href = cible;
+  window.location.replace(cible);
+</script>
+</body>
+</html>
